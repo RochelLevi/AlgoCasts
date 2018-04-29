@@ -5,6 +5,19 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-function maxChar(str) {}
+function maxChar(str) {
+  map = {}
+  maxCount = 0
+  maxChar = str[0]
+  str.split('').forEach( char => {
+      map[char] ? map[char]++ : map[char] = 1
+      if (map[char] > maxCount) {
+        maxCount = map[char]
+        maxChar = char
+      }
+    }
+  )
+  return maxChar
+}
 
 module.exports = maxChar;
