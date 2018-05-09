@@ -8,6 +8,29 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+  if (n < 2){
+    return n
+  }
+  else{
+    return fib(n - 1) + fib(n - 2)
+  }
+  // let negTwo = 0
+  // let negOne = 1
+  // let sum;
+  //
+  // if (n === 0){
+  //   return negTwo
+  // } else if (n === 1){
+  //   return negOne
+  // }
+  //
+  // for (let i = 2; i <= n; i++){
+  //   sum = negOne + negTwo
+  //   negTwo = negOne
+  //   negOne = sum
+  // }
+  // return sum
+}
 
 module.exports = fib;

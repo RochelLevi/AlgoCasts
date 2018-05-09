@@ -14,6 +14,42 @@
 
 const Stack = require('./stack');
 
-class Queue {}
+function privateReverseStack(fullStack, emptyStack){
+  while(fullStack.peek() !== undefined){
+    emptyStack.push(fullStack.pop())
+
+  }
+}
+
+class Queue {
+  constructor(){
+    this.stackOne = new Stack()
+    this.stackTwo = new Stack
+  }
+
+  add(data){
+    this.stackOne.push(data)
+  }
+
+  remove(){
+    // while (this.stackOne.peek() !== undefined){
+    //   this.stackTwo.push(this.stackOne.pop())
+    // }
+    privateReverseStack(this.stackOne, this.stackTwo)
+    let retElement = this.stackTwo.pop()
+    // while (this.stackTwo.peek()){
+    //   this.stackOne.push(this.stackTwo.pop())
+    // }
+    privateReverseStack(this.stackTwo, this.stackOne)
+    return retElement
+  }
+
+  peek(){
+    privateReverseStack(this.stackOne, this.stackTwo)
+    let retElement = this.stackTwo.peek()
+    privateReverseStack(this.stackTwo, this.stackOne)
+    return retElement
+  }
+}
 
 module.exports = Queue;
